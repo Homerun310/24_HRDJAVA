@@ -1,19 +1,23 @@
-package day03;
+package day04;
 
 public class CarExam {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Car mycar=new Car();
-		mycar.model="K5";
-		mycar.color="black";
-		mycar.company="KIA";
-		mycar.maxspeed=200;
 		
-		mycar.Carinfo();
+		//Car 객체 생성
+		Car myCar=new Car();
 		
-		Car mycar2=new Car("KIA", "K7", "black", 200);
-		mycar2.Carinfo();
+		//Tire 객체 장착
+		myCar.tire=new Tire();
+		myCar.run();
+		
+		//HankookTire 객체 장착
+		myCar.tire=new HankookTire();
+		myCar.run();
+
+		//KumhoTire 객체 장착
+		myCar.tire=new KumhoTire();
+		myCar.run();
 	}
 
 }
