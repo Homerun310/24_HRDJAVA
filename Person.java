@@ -1,22 +1,31 @@
-package day03;
+package day05;
 
 public class Person {
 
-	//객체 모델링 (클래스 멤버)
-	
-	//속성 has ~a
-	int age;
 	String name;
+	int age;
 	
-	//생성자
-	public Person() {
-		
+	
+	
+	
+	public String personInfo(String name, int age) {
+		this.name=name;
+		this.age=age;
+		return name;
 		
 	}
-	
-	
-	//메소드
-	void 웃다() {
-		 System.out.println("웃는다");
+	/*
+	public void printAll() {
+		System.out.println(this.personInfo());
 	}
+	
+	static void inputPerson(); {
+		System.out.println("=========");
+		System.out.println("이름 입력: ");
+		System.out.println("나이 입력: ");
+		
+	
+	
+	}
+	*/
 }
