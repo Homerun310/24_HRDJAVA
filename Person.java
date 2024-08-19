@@ -1,31 +1,42 @@
-package day05;
+package day09;
 
 public class Person {
-
-	String name;
-	int age;
+	//은닉화
+	private String name;
+	private String phone;
+	private String email;
 	
+	public Person() {
+		
+	}
 	
-	
-	
-	public String personInfo(String name, int age) {
+	public Person(String name, String phone, String email) {
 		this.name=name;
-		this.age=age;
+		this.phone=phone;
+		this.email=email;
+	}
+
+	public String getName() {
 		return name;
-		
 	}
-	/*
-	public void printAll() {
-		System.out.println(this.personInfo());
+
+	public void setName(String name) {
+		this.name = name;
 	}
-	
-	static void inputPerson(); {
-		System.out.println("=========");
-		System.out.println("이름 입력: ");
-		System.out.println("나이 입력: ");
-		
-	
-	
+
+	public String getPhone() {
+		return phone;
 	}
-	*/
-}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+}	
