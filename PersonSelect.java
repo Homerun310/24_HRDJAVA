@@ -27,7 +27,7 @@ public class PersonSelect {
 
 			//String sql2="select name, phone from person";
 			//이름이 홍길동과 같은 사람의 모든 열의 정보를 검색해서 출력하기
-			String sql2=" select * from person ";
+			String sql2=" select *from person ";
 			
 			st=con.createStatement();
 			rs=st.executeQuery(sql2);
@@ -47,9 +47,9 @@ public class PersonSelect {
 				arrlist.add(person);
 			}
 			for(Person p : arrlist){
-				System.out.println("이름: "+person.getName());
-				System.out.println("전화번호: "+person.getPhone());
-				System.out.println("메일: "+person.getEmail());
+				System.out.println("이름: "+p.getName());
+				System.out.println("전화번호: "+p.getPhone());
+				System.out.println("메일: "+p.getEmail());
 			}
 				
 			
