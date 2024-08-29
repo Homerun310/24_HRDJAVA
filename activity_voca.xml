@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".voca">
+
+    <Button
+        android:id="@+id/backfromvoca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="back"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        />
+
+    <Button
+        android:id="@+id/easyvoca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vocatv"
+        android:layout_marginTop="90dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/black"
+        android:text="Easy" />
+
+    <Button
+        android:id="@+id/normalvoca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:layout_below="@+id/easyvoca"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/black"
+        android:text="Normal" />
+
+    <Button
+        android:id="@+id/hardvoca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:layout_below="@+id/normalvoca"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/black"
+        android:text="Hard" />
+
+    <TextView
+        android:id="@+id/vocatv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="난이도를 골라주세요"
+        android:textSize="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        />
+
+
+</RelativeLayout>

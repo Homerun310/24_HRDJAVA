@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/vocaeasy_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question "
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/vocaeasy_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:layout_below="@+id/vocaeasy_num"
+        android:text="score: "
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/vocaeasy_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+
+        />
+
+    <Button
+        android:id="@+id/vocaeasy_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="submit"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="120dp"
+        android:backgroundTint="@color/black"/>
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/easy_group"
+        android:layout_centerInParent="true">
+
+    <RadioButton
+        android:id="@+id/rb_easy1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/vocaeasy_question"
+        android:layout_marginTop="30dp"
+        android:text="RadioButton" />
+
+    <RadioButton
+        android:id="@+id/rb_easy2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/rb_easy1"
+        android:layout_marginTop="30dp"
+        android:text="RadioButton" />
+
+    <RadioButton
+        android:id="@+id/rb_easy3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/rb_easy2"
+        android:layout_marginTop="30dp"
+        android:text="RadioButton" />
+
+    <RadioButton
+        android:id="@+id/rb_easy4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/rb_easy3"
+        android:layout_marginTop="30dp"
+        android:text="RadioButton" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/backfromvocaeasy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="back to main"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+
+        />
+
+
+</RelativeLayout>
