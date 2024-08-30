@@ -93,8 +93,9 @@
         android:text="back to main"
         android:backgroundTint="@color/white"
         android:textColor="@color/black"
+        android:layout_marginTop="30dp"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
 
         />
 

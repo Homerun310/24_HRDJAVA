@@ -56,10 +56,12 @@ public class vocatest_easy extends AppCompatActivity {
         backbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(vocatest_easy.this, MainActivity.class);
+                Intent intent= new Intent(vocatest_easy.this, MainActivity.class);
                 startActivity(intent);
             }
         });
+
+
 
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,52 +76,50 @@ public class vocatest_easy extends AppCompatActivity {
                     showNextQuestion();
                 }
             }
-            Question currentQuestion = questionList.get(currentQuestionIndex);
-
-            private void checkAnswer() {
-                answered = true;
-                RadioButton rbSelected = findViewById(radioGroup.getCheckedRadioButtonId());
-                int selectedAnswerNo = radioGroup.indexOfChild(rbSelected);
-
-
-
-                if (selectedAnswerNo == currentQuestion.getCorrectAnswerNo()) {
-                    score++;
-                    scoreTextView.setText("Score: " + score);
-                } else {
-                    showCorrectAnswer();
-                }
-
-                if (currentQuestionIndex < questionList.size() - 1) {
-                    submitButton.setText("Next");
-                } else {
-                    submitButton.setText("Finish");
-                }
-            }
-
-            private void showCorrectAnswer() {
-                rb1.setTextColor(Color.RED);
-                rb2.setTextColor(Color.RED);
-                rb3.setTextColor(Color.RED);
-                rb4.setTextColor(Color.RED);
-
-
-                switch (currentQuestion.getCorrectAnswerNo()) {
-                    case 1:
-                        rb1.setTextColor(Color.GREEN);
-                        break;
-                    case 2:
-                        rb2.setTextColor(Color.GREEN);
-                        break;
-                    case 3:
-                        rb3.setTextColor(Color.GREEN);
-                        break;
-                    case 4:
-                        rb4.setTextColor(Color.GREEN);
-                        break;
-                }
-            }
         });
+    }
+
+    private void checkAnswer() {
+        answered = true;
+        RadioButton rbSelected = findViewById(radioGroup.getCheckedRadioButtonId());
+        int selectedAnswerNo = radioGroup.indexOfChild(rbSelected) + 1; // 인덱스가 0부터 시작하므로 +1
+
+        Question currentQuestion = questionList.get(currentQuestionIndex - 1); // 현재 문제를 가져옴
+
+        if (selectedAnswerNo == currentQuestion.getCorrectAnswerNo()) {
+            score++;
+            scoreTextView.setText("Score: " + score);
+        } else {
+            showCorrectAnswer(currentQuestion);
+        }
+
+        if (currentQuestionIndex < questionList.size()) {
+            submitButton.setText("Next");
+        } else {
+            submitButton.setText("Finish");
+        }
+    }
+
+    private void showCorrectAnswer(Question currentQuestion) {
+        rb1.setTextColor(Color.RED);
+        rb2.setTextColor(Color.RED);
+        rb3.setTextColor(Color.RED);
+        rb4.setTextColor(Color.RED);
+
+        switch (currentQuestion.getCorrectAnswerNo()) {
+            case 1:
+                rb1.setTextColor(Color.GREEN);
+                break;
+            case 2:
+                rb2.setTextColor(Color.GREEN);
+                break;
+            case 3:
+                rb3.setTextColor(Color.GREEN);
+                break;
+            case 4:
+                rb4.setTextColor(Color.GREEN);
+                break;
+        }
     }
 
     private void showNextQuestion() {
@@ -153,21 +153,19 @@ public class vocatest_easy extends AppCompatActivity {
         List<Question> questions = new ArrayList<>();
 
         // 샘플 문제들 추가
-        questions.add(new Question("permission", "허가", "임무", "선택", "측정", 3));
-        questions.add(new Question("measure", "계산하다", "만들다", "연구하다", "측정하다", 1));
-        questions.add(new Question("refer", "참조하다", "조회하다", "뜻하다", "제공하다", 1));
+        questions.add(new Question("permission", "허가", "임무", "선택", "측정", 1));
+        questions.add(new Question("measure", "계산하다", "만들다", "연구하다", "측정하다", 4));
+        questions.add(new Question("refer", "뜻하다", "조회하다", "제공하다", "제공하다", 1));
         questions.add(new Question("regard", "~여기다", "가로막다", "측정하다", "~과 엮다", 1));
-//        questions.add(new Question());
-        questions.add(new Question("regard", "~여기다", "가로막다", "측정하다", "~과 엮다", 4));
+        questions.add(new Question("provoke", "진정시키다", "자극하다", "피하다", "위로하다", 2));
+        questions.add(new Question("elaborate", "단순한", "정교한,", "게으른", "모호한", 2)); // 정답 수정
+        questions.add(new Question("adversity", "번영", "동의", "역경", "우정", 3)); // 정답 수정
+        questions.add(new Question("ambiguous", "명확한", "불명확한", "고정된", "변화하는", 2)); // 정답 수정
+        questions.add(new Question("intimidate", "격려하다", "칭찬하다", "무시하다", "위협하다", 4)); // 정답 수정
 
-//        questions.add(new Question());
-//        questions.add(new Question());
-//        questions.add(new Question());
-//        questions.add(new Question());
-//        questions.add(new Question());
-//        questions.add(new Question());
-       //questions.add(new Question());
         return questions;
+
+
     }
 
 

@@ -43,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent= new Intent(MainActivity.this, grammar.class);
+                startActivity(intent);
             }
         });
 
@@ -80,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(MainActivity.this, add_word.class);
+                Intent intent= new Intent(MainActivity.this, MainActivity3.class);
                 startActivity(intent);
             }
         });
